@@ -8,7 +8,7 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "@/components/columns";
 
 export default function Home() {
-  const [query, setQuery] = useState("naruto");
+  const [query, setQuery] = useState("");
   const [totalResults, setTotalResults] = useState([]);
   const [loading, setLoading] = useState(false);
 
