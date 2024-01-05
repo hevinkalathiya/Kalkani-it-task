@@ -10,13 +10,13 @@ import { columns } from "@/components/columns";
 export default function Home() {
   const [query, setQuery] = useState("naruto");
   const [totalResults, setTotalResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
     try {
+      setLoading(true);
       const response = await axios.get(`https://api.jikan.moe/v4/characters`, {
         params: {
-          // page: 1,
-          // limit: 15,
           q: query,
           order_by: "favorites",
           sort: "desc",
@@ -25,6 +25,8 @@ export default function Home() {
       setTotalResults(response.data.data);
     } catch (error) {
       console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,10 +53,13 @@ export default function Home() {
             Search
           </Button>
         </div>
-        <p className="text-center py-10">
-          Total <span className="font-bold">{totalResults.length}</span>{" "}
-          matching anime character found
-        </p>
+        {loading && <p className="text-center py-2">Loading...</p>}
+        {!loading && (
+          <p className="text-center py-10">
+            Total <span className="font-bold">{totalResults.length}</span>{" "}
+            matching anime character found
+          </p>
+        )}
         <div className="container mx-auto py-10">
           <DataTable columns={columns} data={totalResults} />
         </div>
