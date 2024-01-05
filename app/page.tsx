@@ -29,32 +29,36 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h1 className="text-center py-10 text-3xl font-medium">
-        Search Anime Character
-      </h1>
-      <div className="flex justify-center items-center gap-3">
-        <Input
-          className="max-w-[450px] rounded-xl p-2"
-          placeholder="Search Your Favourite Anime 😁"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <Button
-          className="rounded-xl px-7 border-2 border-black"
-          variant="purple"
-          onClick={handleSearch}
-        >
-          Search
-        </Button>
+    <>
+      <div className="gradient "></div>
+      <div className="bg-image"></div>
+      <div>
+        <h1 className="text-center py-10 text-3xl font-medium">
+          Search Anime Character
+        </h1>
+        <div className="flex justify-center items-center gap-3">
+          <Input
+            className="max-w-[450px] rounded-xl p-2"
+            placeholder="Search Your Favourite Anime 😁"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <Button
+            className="rounded-xl px-7 border-2 border-black"
+            variant="purple"
+            onClick={handleSearch}
+          >
+            Search
+          </Button>
+        </div>
+        <p className="text-center py-10">
+          Total <span className="font-bold">{totalResults.length}</span>{" "}
+          matching anime character found
+        </p>
+        <div className="container mx-auto py-10">
+          <DataTable columns={columns} data={totalResults} />
+        </div>
       </div>
-      <p className="text-center py-10">
-        Total <span className="font-bold">{totalResults.length}</span> matching
-        anime character found
-      </p>
-      <div className="container mx-auto py-10">
-        <DataTable columns={columns} data={totalResults} />
-      </div>
-    </div>
+    </>
   );
 }
