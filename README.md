@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anime
+
+This repository contains the source code for to search Your favourite anime characters
+
+## Live Demo
+
+Check out the live demo of the Task Management App [here](https://kalkani-it-task1.vercel.app/).🐳
+
+## Technologies Used
+
+- [Shadcn Ui](https://ui.shadcn.com/): Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.🤖
+
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom designs.🐊
+
+- [Tanstack Table](https://tanstack.com/table/v8):Headless UI for building powerful tables & datagrids.🦊
+
+- [Axios](https://axios-http.com/docs/intro):Promise based HTTP client for the browser and node.js🦀
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up and run the project on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js: [Download and install Node.js](https://nodejs.org/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/hevinkalathiya/Kalkani-it-task.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+1. install node modules:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Run:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+    npm run dev
+   ```
