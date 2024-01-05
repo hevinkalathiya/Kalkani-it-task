@@ -1,4 +1,8 @@
-# Anime
+# Anime Character Search App
+
+![App Screenshot](public/Screenshot%20(10).png)
+
+## Anime
 
 This repository contains the source code for to search Your favourite anime characters
 
@@ -43,3 +47,27 @@ These instructions will help you set up and run the project on your local machin
    ```bash
     npm run dev
    ```
+
+
+### Write a program to print the Fibonacci series up to the number which is lesser than the given input.
+
+```javascript
+
+function fibonacciSeries(limit) {
+  const fibSeries = [0, 1];
+  while (true) {
+    const nextNum =
+      fibSeries[fibSeries.length - 1] + fibSeries[fibSeries.length - 2];
+    if (nextNum < limit) {
+      fibSeries.push(nextNum);
+    } else {
+      break;
+    }
+  }
+  return fibSeries;
+}
+
+const result = fibonacciSeries(120);
+
+console.log(result.join(", "));
+```
