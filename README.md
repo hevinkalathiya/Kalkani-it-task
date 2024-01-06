@@ -53,6 +53,19 @@ These instructions will help you set up and run the project on your local machin
 
 ```javascript
 
+function fibonacciSeries(limit) {
+  let a = 0, b = 1;
+  let result = [];
 
+  while (a < limit) {
+    result.push(a);
+    [a, b] = [b, a + b];
+  }
+
+  return result.join(', ');
+}
+
+let output = fibonacciSeries(10)
+console.log(output);
 
 ```
